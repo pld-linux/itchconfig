@@ -37,17 +37,16 @@ Makefile) potrzebne do zbudowania wersji wykonywalnej programu ze
 
 %build
 ./configure \
-	--path-prefix=%{_prefix} \
-	--path-man=%{_mandir} \
-	--path-info=%{_infodir}
+	--path-prefix=$RPM_BUILD_ROOT%{_prefix} \
+	--path-man=$RPM_BUILD_ROOT%{_mandir} \
+	--path-info=$RPM_BUILD_ROOT%{_infodir}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 # doesn't work. how to fix it???
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+%{__make} install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
