@@ -6,7 +6,7 @@ Version:	0.0.4
 Release:	1
 License:	GPL
 Group:		Development/Building
-Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	fd10a534c3a845f07cac8be8c301e266
 URL:		http://itchconfig.sourceforge.net/
 BuildRequires:	m4 >= 1.3
@@ -24,12 +24,13 @@ which are necessary to build an executable program from the source
 code of a software package on the user's computer.
 
 %description -l pl
-itchconfig jest narzêdziem do ³atwego, nie interaktywnego ustawiania
-konfiguracji pakietów na systemach UNIX-owych. Podobnie jak GNU
-autoconf/automake skrypt configure wygenerowany przez itchconfig
-sprawdza kilka w³asno¶ci komputera u¿ytkownika(kompilator C, biblioteki,
-...) oraz generuje wszystkie pliki(np Makefile) potrzebne do zbudowania
-wersji wykonywalnej programu z ¼róde³ na komputerze u¿ytkownika.
+itchconfig jest narzêdziem do ³atwego, nieinteraktywnego ustawiania
+konfiguracji pakietów na systemach uniksowych. Podobnie jak w
+przypadku narzêdzi GNU autoconf/automake skrypt configure wygenerowany
+przez itchconfig sprawdza kilka w³asno¶ci komputera u¿ytkownika
+(kompilator C, biblioteki...) oraz generuje wszystkie pliki (np.
+Makefile) potrzebne do zbudowania wersji wykonywalnej programu ze
+¼róde³ na komputerze u¿ytkownika.
 
 %prep
 %setup -q
