@@ -37,16 +37,20 @@ Makefile) potrzebne do zbudowania wersji wykonywalnej programu ze
 
 %build
 ./configure \
-	--path-prefix=$RPM_BUILD_ROOT%{_prefix} \
-	--path-man=$RPM_BUILD_ROOT%{_mandir} \
-	--path-info=$RPM_BUILD_ROOT%{_infodir}
+	--path-prefix=%{_prefix} \
+	--path-man=%{_mandir} \
+	--path-info=%{_infodir}
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-# doesn't work. how to fix it???
-
-%{__make} install
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/itchconfig}
+install -d $RPM_BUILD_ROOT{%{_mandir}/man1,%{_infodir},%{perl_vendorlib}}
+install itchconfig itchscan $RPM_BUILD_ROOT%{_bindir}
+install itchlib.pm itchcop.pm $RPM_BUILD_ROOT%{perl_vendorlib}
+install itchconfig.m4 $RPM_BUILD_ROOT%{_datadir}/itchconfig
+install docu/itchconfig.1 docu/itchscan.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install docu/itchconfig.info $RPM_BUILD_ROOT%{_infodir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -59,3 +63,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc docu/*.html README INSTALL
+%attr(755,root,root) %{_bindir}/*
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/*
+%{_mandir}/man1/*
+%{_infodir}/*
+%{perl_vendorlib}/*
