@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Tool for flexible configuration software packages
-Summary(pl):	Narzêdzie do ³atwego konfigurowania pakietów
+Summary(pl.UTF-8):   NarzÄ™dzie do Å‚atwego konfigurowania pakietÃ³w
 Name:		itchconfig
 Version:	0.0.4
 Release:	1
@@ -23,14 +23,14 @@ compiler, libraries, ...) and generates all files (e.g. the Makefile)
 which are necessary to build an executable program from the source
 code of a software package on the user's computer.
 
-%description -l pl
-itchconfig jest narzêdziem do ³atwego, nieinteraktywnego ustawiania
-konfiguracji pakietów na systemach uniksowych. Podobnie jak w
-przypadku narzêdzi GNU autoconf/automake skrypt configure wygenerowany
-przez itchconfig sprawdza kilka w³asno¶ci komputera u¿ytkownika
+%description -l pl.UTF-8
+itchconfig jest narzÄ™dziem do Å‚atwego, nieinteraktywnego ustawiania
+konfiguracji pakietÃ³w na systemach uniksowych. Podobnie jak w
+przypadku narzÄ™dzi GNU autoconf/automake skrypt configure wygenerowany
+przez itchconfig sprawdza kilka wÅ‚asnoÅ›ci komputera uÅ¼ytkownika
 (kompilator C, biblioteki...) oraz generuje wszystkie pliki (np.
 Makefile) potrzebne do zbudowania wersji wykonywalnej programu ze
-¼róde³ na komputerze u¿ytkownika.
+ÅºrÃ³deÅ‚ na komputerze uÅ¼ytkownika.
 
 %prep
 %setup -q
