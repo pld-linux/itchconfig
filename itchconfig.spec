@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Tool for flexible configuration software packages
-Summary(pl.UTF-8):   Narzędzie do łatwego konfigurowania pakietów
+Summary(pl.UTF-8):	Narzędzie do łatwego konfigurowania pakietów
 Name:		itchconfig
 Version:	0.0.4
 Release:	1
