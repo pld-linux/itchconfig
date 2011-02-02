@@ -68,5 +68,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
 %{_mandir}/man1/*
-%{_infodir}/*
+%{_infodir}/*.info*
 %{perl_vendorlib}/*
